@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="820.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CustomerRecordsController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="560.0" prefWidth="580.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Add Customer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="575.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="70.0" prefHeight="25.0" prefWidth="75.0" text="Address">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name" layoutX="160.0" layoutY="30.0" />
+                        <TextField fx:id="phoneNumber" layoutX="160.0" layoutY="190.0" />
+                        <TextField fx:id="zip" layoutX="160.0" layoutY="150.0" />
+                        <Label layoutX="10.0" layoutY="30.0" prefHeight="27.0" prefWidth="140.0" text="Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="190.0" prefHeight="27.0" prefWidth="136.0" text="Phone Number">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="423.0" layoutY="474.0" mnemonicParsing="false" onAction="#addNewCustomer" prefHeight="43.0" prefWidth="142.0" text="Save Customer" />
+                        <Label layoutX="10.0" layoutY="110.0" prefHeight="27.0" prefWidth="140.0" text="Country">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="150.0" prefHeight="27.0" prefWidth="140.0" text="Zip">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="address" layoutX="160.0" layoutY="70.0" />
+                        <TextField fx:id="country" layoutX="160.0" layoutY="110.0" />
+                        <Text fx:id="addCe" fill="RED" layoutX="14.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="addCs" layoutX="14.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Update Customer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label fx:id="errorMsg" alignment="TOP_LEFT" layoutX="8.0" layoutY="260.0" prefHeight="52.0" prefWidth="299.0" text="Every field must be filled out!" textFill="RED" visible="false">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="70.0" prefHeight="25.0" prefWidth="75.0" text="Address">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name1" layoutX="160.0" layoutY="30.0" />
+                        <TextField fx:id="country1" layoutX="160.0" layoutY="110.0" />
+                        <TextField fx:id="address1" layoutX="160.0" layoutY="70.0" />
+                        <Label layoutX="10.0" layoutY="30.0" prefHeight="27.0" prefWidth="140.0" text="Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="190.0" prefHeight="27.0" prefWidth="136.0" text="Phone Number">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="424.0" layoutY="474.0" mnemonicParsing="false" onAction="#modifyNewCustomer" prefHeight="43.0" prefWidth="142.0" text="Update Customer" />
+                        <Label layoutX="10.0" layoutY="110.0" prefHeight="27.0" prefWidth="140.0" text="Country">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="150.0" prefHeight="27.0" prefWidth="140.0" text="Zip">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="zip1" layoutX="160.0" layoutY="150.0" />
+                        <TextField fx:id="phoneNumber1" layoutX="160.0" layoutY="190.0" />
+                        <Text fx:id="updateCe" fill="RED" layoutX="14.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="updateCs" layoutX="14.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button layoutX="603.0" layoutY="306.0" mnemonicParsing="false" onAction="#updateExsistingCustomers" prefHeight="25.0" prefWidth="200.0" text="Update Customer List" />
+      <Button layoutX="606.0" layoutY="543.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="43.0" prefWidth="200.0" text="Return to Menu" />
+      <TableView fx:id="tableView" layoutX="603.0" layoutY="14.0" prefHeight="288.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="cName" prefWidth="199.0" text="Customers" />
+         </columns>
+      </TableView>
+      <Button layoutX="603.0" layoutY="337.0" mnemonicParsing="false" onAction="#loadCustomerData" prefHeight="25.0" prefWidth="200.0" text="Load Customer Data" />
+      <Button layoutX="632.0" layoutY="368.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="43.0" prefWidth="142.0" text="Delete Customer" />
+   </children>
+</AnchorPane>

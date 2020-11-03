@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="817.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AppointmentsController">
+   <children>
+      <Button layoutX="603.0" layoutY="306.0" mnemonicParsing="false" onAction="#updateExsistingCustomers" prefHeight="25.0" prefWidth="200.0" text="Update Customer List" />
+      <Button layoutX="14.0" layoutY="375.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="43.0" prefWidth="142.0" text="Return to Menu" />
+      <TabPane layoutX="13.0" layoutY="14.0" prefHeight="562.0" prefWidth="582.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Appointment">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="582.0">
+                     <children>
+                        <Button layoutX="446.0" layoutY="476.0" mnemonicParsing="false" onAction="#addAppt" prefHeight="43.0" prefWidth="122.0" text="Add" />
+                        <TextField fx:id="startTime" layoutX="318.0" layoutY="43.0" promptText="e.g. 8:30" />
+                        <RadioButton fx:id="am" layoutX="476.0" layoutY="47.0" mnemonicParsing="false" text="AM" />
+                        <RadioButton fx:id="pm" layoutX="524.0" layoutY="47.0" mnemonicParsing="false" text="PM" />
+                        <Text layoutX="318.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" wrappingWidth="107.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="endTime" disable="true" layoutX="318.0" layoutY="105.0" />
+                        <RadioButton fx:id="m15" layoutX="479.0" layoutY="84.0" mnemonicParsing="false" text="15 Minute" />
+                        <RadioButton fx:id="m30" layoutX="479.0" layoutY="109.0" mnemonicParsing="false" text="30 Minute" />
+                        <RadioButton fx:id="m45" layoutX="479.0" layoutY="134.0" mnemonicParsing="false" text="45 Minute" />
+                        <Text layoutX="10.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Title" wrappingWidth="158.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="apptTitle" layoutX="10.0" layoutY="39.0" prefHeight="25.0" prefWidth="219.0" />
+                        <Text layoutX="10.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Description" wrappingWidth="242.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="apptDesc" layoutX="10.0" layoutY="99.0" prefHeight="62.0" prefWidth="219.0" />
+                        <Text layoutX="10.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Location" wrappingWidth="242.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="hp" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" text="Horizon Pediatrics" />
+                        <RadioButton fx:id="ch" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" text="Concentra Health" />
+                        <RadioButton fx:id="tec" layoutX="150.0" layoutY="200.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="148.0" text="Thomasville Eye Ctr." />
+                        <RadioButton fx:id="hjm" layoutX="150.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="168.0" text="Healing Jouirney Massage" />
+                        <RadioButton fx:id="bna" layoutX="14.0" layoutY="260.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="208.0" text="Bradenton Neurology Assoc." />
+                        <Text fx:id="addTE" fill="RED" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="addTS" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="321.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Business Hours: 8am - 5pm" />
+                        <Text layoutX="318.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="107.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="318.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time" wrappingWidth="107.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="startDate" layoutX="318.0" layoutY="188.0" promptText="e.g. 2019/11/30" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Remove Appointment">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button layoutX="446.0" layoutY="476.0" mnemonicParsing="false" onAction="#removeAppt" prefHeight="43.0" prefWidth="122.0" text="Remove" />
+                        <TableView fx:id="removeView" layoutX="3.0" layoutY="10.0" prefHeight="401.0" prefWidth="576.0">
+                          <columns>
+                            <TableColumn fx:id="rTitle" prefWidth="103.0" text="Title" />
+                              <TableColumn fx:id="rStartTime" prefWidth="109.0" text="Start Time" />
+                              <TableColumn fx:id="rDescription" prefWidth="214.0" text="Description" />
+                              <TableColumn fx:id="rLocation" prefWidth="155.0" text="Location" />
+                          </columns>
+                        </TableView>
+                        <Text fx:id="removeTE" fill="RED" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="removeTS" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="191.0" layoutY="411.0" mnemonicParsing="false" onAction="#updateViews" prefHeight="25.0" prefWidth="200.0" text="Update Appointments" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Update Appointment">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button layoutX="446.0" layoutY="477.0" mnemonicParsing="false" onAction="#updateAppt" prefHeight="43.0" prefWidth="122.0" text="Update" />
+                        <TableView fx:id="updateView" layoutX="3.0" layoutY="10.0" prefHeight="171.0" prefWidth="570.0">
+                           <columns>
+                              <TableColumn fx:id="uTitle" prefWidth="103.0" text="Title" />
+                              <TableColumn fx:id="uStartTime" prefWidth="109.0" text="Start Time" />
+                              <TableColumn fx:id="uDescription" prefWidth="214.0" text="Description" />
+                              <TableColumn fx:id="uLocation" prefWidth="155.0" text="Location" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="u_endTime" disable="true" layoutX="318.0" layoutY="305.0" />
+                        <RadioButton fx:id="u_am" layoutX="476.0" layoutY="247.0" mnemonicParsing="false" text="AM" />
+                        <RadioButton fx:id="u_pm" layoutX="524.0" layoutY="247.0" mnemonicParsing="false" text="PM" />
+                        <Text layoutX="318.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" wrappingWidth="107.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="u_startTime" layoutX="318.0" layoutY="243.0" />
+                        <Text layoutX="318.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time" wrappingWidth="107.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="u_m15" layoutX="479.0" layoutY="284.0" mnemonicParsing="false" text="15 Minute" />
+                        <RadioButton fx:id="u_m30" layoutX="479.0" layoutY="309.0" mnemonicParsing="false" text="30 Minute" />
+                        <RadioButton fx:id="u_m45" layoutX="479.0" layoutY="334.0" mnemonicParsing="false" text="45 Minute" />
+                        <Text layoutX="10.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Title" wrappingWidth="158.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="u_apptTitle" layoutX="10.0" layoutY="239.0" prefHeight="25.0" prefWidth="219.0" />
+                        <Text layoutX="10.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Description" wrappingWidth="242.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="u_apptDesc" layoutX="10.0" layoutY="299.0" prefHeight="62.0" prefWidth="219.0" />
+                        <Text layoutX="10.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Location" wrappingWidth="242.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="u_hp" layoutX="14.0" layoutY="400.0" mnemonicParsing="false" text="Horizon Pediatrics" />
+                        <RadioButton fx:id="u_ch" layoutX="14.0" layoutY="430.0" mnemonicParsing="false" text="Concentra Health" />
+                        <RadioButton fx:id="u_tec" layoutX="150.0" layoutY="400.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="148.0" text="Thomasville Eye Ctr." />
+                        <RadioButton fx:id="u_hjm" layoutX="150.0" layoutY="430.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="168.0" text="Healing Jouirney Massage" />
+                        <RadioButton fx:id="u_bna" layoutX="14.0" layoutY="460.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="208.0" text="Bradenton Neurology Assoc." />
+                        <Button layoutX="257.0" layoutY="181.0" mnemonicParsing="false" onAction="#loadAppt" prefHeight="25.0" prefWidth="272.0" text="Load Selected Appointment to Update" />
+                        <Text fx:id="updateTE" fill="RED" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="updateTS" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="50.0" layoutY="181.0" mnemonicParsing="false" onAction="#updateViews" prefHeight="25.0" prefWidth="200.0" text="Update Appointments" />
+                        <Text fill="RED" layoutX="321.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Business Hours: 8am - 5pm" />
+                        <Text layoutX="318.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="107.13671875">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="u_startDate" layoutX="318.0" layoutY="388.0" promptText="e.g. 2019/11/30" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="tableView" layoutX="603.0" layoutY="14.0" prefHeight="288.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="cName" prefWidth="199.0" text="Customers" />
+         </columns>
+      </TableView>
+      <Button layoutX="603.0" layoutY="533.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="43.0" prefWidth="200.0" text="Return to Menu" />
+   </children>
+</AnchorPane>

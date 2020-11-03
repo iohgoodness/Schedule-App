@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ReportsController">
+   <children>
+      <Button layoutX="778.0" layoutY="516.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="43.0" prefWidth="142.0" text="Return to Menu" />
+      <Button layoutX="14.0" layoutY="152.0" mnemonicParsing="false" onAction="#getAppointmentTypes" text="Report Number of Appointment Types" />
+      <Text fx:id="m15" layoutX="14.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 minute appts: " wrappingWidth="134.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="m30" layoutX="14.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 minute appts: " wrappingWidth="134.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="m45" layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45 minute appts: " wrappingWidth="134.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="dateZone" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="77.0" promptText="e.g. 02" />
+      <TextField fx:id="dateZone1" layoutX="105.0" layoutY="41.0" prefHeight="25.0" prefWidth="77.0" promptText="e.g. 2019" />
+      <TableView fx:id="rView" layoutX="261.0" layoutY="14.0" prefHeight="288.0" prefWidth="413.0">
+         <columns>
+            <TableColumn fx:id="rTitle" prefWidth="47.0" text="Title" />
+            <TableColumn fx:id="rStartTime" prefWidth="78.0" text="Start Time" />
+            <TableColumn fx:id="rDescription" prefWidth="94.0" text="Description" />
+            <TableColumn fx:id="rLocation" prefWidth="164.0" text="Location" />
+         </columns>
+      </TableView>
+      <Button layoutX="502.0" layoutY="306.0" mnemonicParsing="false" onAction="#updateViews" text="Report Schedule of Customer" />
+      <Text layoutX="11.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Number of Customers and Appointments" wrappingWidth="342.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="customers" layoutX="14.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers: " wrappingWidth="134.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="appointments" layoutX="14.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments: " wrappingWidth="134.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="115.0" layoutY="504.0" mnemonicParsing="false" onAction="#reportTotalNumbers" text="Report Total Numbers" />
+      <Button layoutX="702.0" layoutY="306.0" mnemonicParsing="false" onAction="#updateExsistingCustomers" prefHeight="25.0" prefWidth="200.0" text="Update Customer List" />
+      <TableView fx:id="tableView" layoutX="702.0" layoutY="14.0" prefHeight="288.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="cName" prefWidth="199.0" text="Customers" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
